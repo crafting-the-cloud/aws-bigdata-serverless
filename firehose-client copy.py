@@ -2,8 +2,9 @@ import boto3
 from pprint import pprint
 import json
 def main():
-    profile_name = "aws_admin"
-    region_name = 'us-east-1'
+    profile_name = '<Profile Name>'
+    region_name = 'Region_Name'
+    stream_name = 'Firehose_Name'
     session = boto3.Session(profile_name=profile_name, region_name=region_name)
     client = session.client('firehose')
     records = []
@@ -16,7 +17,7 @@ def main():
             if count % 500 == 0:
               
               response = client.put_record_batch(
-                    DeliveryStreamName='rpm-data',
+                    DeliveryStreamName=stream_name,
                     Records=records
                 )
               print(response)
@@ -32,7 +33,7 @@ def main():
             
             print(len(records))
             response = client.put_record_batch(
-                DeliveryStreamName='rpm-data',
+                DeliveryStreamName=stream_name,
                 Records=records
             )
             print(response)

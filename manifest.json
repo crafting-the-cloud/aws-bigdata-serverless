@@ -2,7 +2,7 @@
     "fileLocations": [
         {
             "URIs": [
-                "https://rpm-data-s3-123123456.s3.us-east-1.amazonaws.com/2024/11/20/16/rpm-data-1-2024-11-20-16-16-51-f3f7f295-832a-4e3d-b677-5b63c41f29c3"
+                "<S3 File URI>"
             ]
         }
     ],

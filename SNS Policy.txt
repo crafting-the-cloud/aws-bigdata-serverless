@@ -18,13 +18,13 @@
         "SNS:ListSubscriptionsByTopic",
         "SNS:Publish"
       ],
-      "Resource": "arn:aws:sns:us-east-1:409025572067:s3-event-sns",
+      "Resource": "<SNS_TOPIC_ARN>",
       "Condition": {
         "StringEquals": {
-          "AWS:SourceAccount": "409025572067"
+          "AWS:SourceAccount": "<Your_Account_Number>"
         },
         "ArnLike": {
-          "AWS:SourceArn": "arn:aws:s3:::rpm-data-s3-123123123"
+          "AWS:SourceArn": "<S3_ARN>"
         }
       }
     }
